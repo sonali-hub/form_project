@@ -1,0 +1,81 @@
+<html>
+<head>
+<script>
+function myvalid()
+{
+ var v= document.myform.t1.value;
+ var em=document.myform.email.value;
+ var e=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+ var p=document.myform.phone.value; 
+ var d=document.myform.date.value;
+ var pa=document.myform.password.value;
+if(v=="")
+ 	{
+  	alert(" Please enter your name!!!");
+ 	}
+else if(em.match(e))
+	{
+	//alert("please enter your email address!!!");
+	}
+else 
+{
+ alert("please enter a avalid email address");
+ }
+
+if(p=="")
+	{
+	alert("please enter your phone no!!!");
+	}
+else if (isNaN(p))
+	{
+	alert("please enter number only!!!");
+	}
+else if(p.length!=10)
+	{
+	alert("enter only 10 digit phone number");
+	} 
+else if (d=="")
+	{
+	 alert("Please enter your date of birth!!!");
+	}
+else if(pa=="")
+	{
+	 alert("please enter your password!!");
+	}
+else
+	{
+	alert("THANK YOU FOR REGISTRATION!!");	
+	}
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+</head>
+<body bgcolor="grey">
+<center>
+<hr color="white">
+<h1>RESISTRATION FORM!</h1>
+<hr color="white">
+<fieldset style="height:300px " >
+<form name ="myform">
+first Name*:<input type="text" size=40 name="t1"><br><br><br>
+last name:<input type="text" size=40 ><br><br><br>
+email address*:<input type="email" size=40  name="email"><br><br><br>
+phone no*:<input type="num" size=40 name="phone"> <br><br><br>
+
+Password*:<input type="password" size=40  name="password"><br><br><br>
+date of birth:<input type="date" size=65 name="date"><br><br><br>
+<button onclick="myvalid();">register</button>
+</form>
+</fieldset>
+</center>
+</body>
+</html>
